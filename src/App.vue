@@ -34,8 +34,8 @@ export default {
         draggable
     },
     methods: {
-        chosenMenu(index, title) {
-            this.id = index
+        chosenMenu(valueid, title) {
+            this.id = valueid
             this.title = title
         },
         createBoard() {
@@ -55,10 +55,12 @@ export default {
             })
         },
         deleteMenu() {
-            this.boards.forEach((board) => {
-                if(board.id === this.id)
-                    this.boards.splice(this.boards.indexOf(board), 1)
-            })
+            for (let i = 0; i < this.boards.length; i++) {
+                if(this.boards[i].id === this.id) {
+                    this.boards.splice(i, 1)
+                    i--
+                }
+            }
             this.$refs.Menu.deleteItem(this.id);
             this.id = null
             this.title = null

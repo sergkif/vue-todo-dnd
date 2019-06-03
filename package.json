@@ -2,10 +2,12 @@
   "name": "vue-test-task",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/sergkif/vue-todo-dnd",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -27,6 +29,7 @@
     "node-sass": "^4.9.0",
     "pug": "^2.0.3",
     "sass-loader": "^7.1.0",
+    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
